@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: zulu_boot
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: test
+      port: 27017
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      password: anton
+  datasource:
+    username: anton
+    password: anton
+    url: jdbc:postgresql://localhost:5432/spring_data
+  liquibase:
+    change-log: classpath:db/changelog.xml
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+jsonplaceholder:
+  enabled: ${JSON_ENABLED:false}
+  url: https://jsonplaceholder.typicode.com
+  posts: /posts
+  albums: /albums
